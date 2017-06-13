@@ -1,6 +1,12 @@
-// Your JS goes here
-var color1 = 0;
-var color2 = 255;
+
+function randomcolors() {
+   var letters = "abcdef0123456789";
+   var hash = "#";
+   for (var i = 0; i < 6; i++) {
+     hash += letters[Math.floor(Math.random() * letters.length)];
+
+   }return hash
+}
 
 function checkBoard() {
   for (var i = 0; i < (window.innerHeight)/4; i++) {
@@ -12,14 +18,7 @@ function checkBoard() {
     box.style.paddingBottom = '11.1%';
     box.style.float = 'left';
 
-
-    if (i % 2 === 0) {
-      box.style.backgroundColor = 'rgba(13, '+ color1 + ', 12, 1)';
-    } else {
-      box.style.backgroundColor = 'rgba(120, 26,'+ color2 +' , 1)';
-    }
-    color1++
-    color2--
+      box.style.backgroundColor = randomcolors();
   }
 }
 checkBoard()
