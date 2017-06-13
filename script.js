@@ -14,9 +14,9 @@ function checkBoard() {
 
 
     if (i % 2 === 0) {
-      box.style.backgroundColor = 'rgba(13, '+ color1 + ', 12, 1)';
+      box.style.backgroundColor = ('#000000');
     } else {
-      box.style.backgroundColor = 'rgba(120, 26,'+ color2 +' , 1)';
+      box.style.backgroundColor = ('#d70909');
     }
     color1++
     color2--
